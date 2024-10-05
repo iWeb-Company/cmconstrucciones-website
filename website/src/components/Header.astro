@@ -1,0 +1,20 @@
+---
+import Menu from "./Menu.astro"
+import Logo from "./Logo.astro"
+import '@fontsource/black-ops-one';
+---
+
+<header class="fixed z-50 flex py-3 gap-x-96 bg-white/70 w-full items-center justify-start text-4xl">
+    <Menu class="ml-5 font-extralight" />
+    <div class="flex items-center gap-96">
+        <Logo 
+            src="/favicon.svg" 
+            alt="Logo CMC SRL"
+            class="w-44 h-20"
+            />
+        <h1 class="underline">CARLOS MARTINEZ CONSTRUCCIONES</h1>
+    </div>
+</header>
+<style>
+
+</style>
