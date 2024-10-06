@@ -3,27 +3,63 @@ import Layout from '../layouts/Layout.astro';
 import '@fontsource/black-ops-one';
 // Supports weights 100-900
 import '@fontsource-variable/montserrat';
+
+import BoxsHome from '../components/BoxsHome.astro';
 ---
 
 <Layout
  title="Carlos Martinez Construcciones S.R.L - Empresa constructura en seco."
  description='Empresa constructora especializada a la construccion en seco.'
  >
- <section id="home" class="wrap py-96">
+    <section id="home" class="wrap pt-80 py-40">
     
-     <div class="content">
-        <div class="flex gap-y-2 bg-home justify-center items-center flex-col py-8 w-full h-max text-white">
-            <h2 class="text-center text-[48px]">¿Quienes Somos?</h2>    
-            <p class="w-[1037px] montserrat">Somos una empresa especializada en construcción en seco, ofreciendo soluciones rápidas, eficientes y de alta calidad para proyectos residenciales, comerciales e industriales. Nos destacamos por el uso de sistemas de construcción modernos como el steel framing, placas de yeso (drywall), y paneles aislantes, que permiten reducir tiempos de obra, minimizar residuos y optimizar costos sin comprometer la seguridad ni el confort.
-            </p>  
+        <div class="content">
+            <div class="flex gap-y-2 bg-home justify-center items-center flex-col py-8 w-full h-full text-white">
+                <h2 class="text-center text-[48px]">¿Quienes Somos?</h2>    
+                <p class="w-[1037px] montserrat">Somos una empresa especializada en construcción en seco, ofreciendo soluciones rápidas, eficientes y de alta calidad para proyectos residenciales, comerciales e industriales. Nos destacamos por el uso de sistemas de construcción modernos como el steel framing, placas de yeso (drywall), y paneles aislantes, que permiten reducir tiempos de obra, minimizar residuos y optimizar costos sin comprometer la seguridad ni el confort.
+                </p>  
+            </div>
+            <BoxsHome />
+    
         </div>
-        <div>
-            
+    
+    </section>
+    <h2 class="bg-white text-[48px] text-center py-4">Nuestros trabajos especializados
+    </h2> 
+    <section id="works-esp" class="gap-0 w-[2000px] text-white place-items-center h-[800px] text-center grid grid-cols-[repeat(2,1fr)] grid-rows-[repeat(2,1fr)]">
+        <div class="border border-black boxs-works bg-[url('/imgs/works/1.png')] text-white">
+            <div class="uno">
+                <div class="relative">
+                    <small class="absolute top-24 left-60 text-8xl">1</small>
+                    <small class="absolute top-48 left-44 text-3xl">Tabiqueria</small>
+                </div>
+            </div>
         </div>
-    </div>
-    
-    
- </section>
+        <div class="border border-black boxs-works bg-[url('/imgs/works/2.png')] text-white">
+            <div class="dos">
+                <div class="relative">
+                    <small class="absolute top-24 right-72 text-8xl">2</small>
+                    <small class="absolute top-48 right-56 text-3xl">Cielorraso</small>
+                </div>
+            </div>
+        </div>
+        <div class="border border-black boxs-works bg-[url('/imgs/works/3.png')] text-white">
+            <div class="tres">
+                <div class="relative">
+                    <small class="absolute top-24 left-60 text-8xl">3</small>
+                    <small class="absolute top-48 left-44 text-3xl">Revestimientos</small>
+                </div>
+            </div>
+        </div>
+        <div class="border border-black boxs-works bg-[url('/imgs/works/4.png')] text-white">
+            <div class="cuatro">
+                <div class="relative">
+                    <small class="absolute top-24 right-72 text-8xl">4</small>
+                    <small class="absolute top-48 right-56 text-3xl">Tratamientos <br> Acústicos</small>
+                </div>
+            </div>
+        </div>
+    </section>
     <section id="principal-works"></section>
     <section id="our-works"></section>
     <section id="benefits"></section>
@@ -31,8 +67,56 @@ import '@fontsource-variable/montserrat';
 </Layout>
 
 <style>
-    <style>
-        .montserrat{
+    .boxs-works{
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+        width: 100%;
+        height: 100%;
+        position: relative;
+    }
+    .uno{
+        display: block;
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(139.26deg, rgba(33, 37, 74, 0.7) 4.17%, rgba(55, 72, 176, 0.7) 95.83%);
+        clip-path: polygon(0 0,75% 0, 35% 100%, 0% 100%);
+    }
+    .dos{
+        display: block;
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(139.26deg, rgba(33, 37, 74, 0.7) 4.17%, rgba(55, 72, 176, 0.7) 95.83%);
+        clip-path: polygon(25% 0,100% 0, 100% 100%, 55% 100%);
+
+    }
+    .tres{
+        display: block;
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(139.26deg, rgba(33, 37, 74, 0.7) 4.17%, rgba(55, 72, 176, 0.7) 95.83%);
+        clip-path: polygon(0 0, 35% 0, 76% 100%, 0 100%);
+    }
+    .cuatro{
+        display: block;
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(139.26deg, rgba(33, 37, 74, 0.7) 4.17%, rgba(55, 72, 176, 0.7) 95.83%);
+        clip-path: polygon(55% 0, 100% 0, 100% 100%, 25% 100%);
+    }
+        p{
             font-family: 'Montserrat Variable', sans-serif;
         }
         .bg-home{
@@ -41,7 +125,6 @@ import '@fontsource-variable/montserrat';
         }
     .wrap{
         position: relative;
-        height: 1348px;
     }
 	.wrap::before{
         content: "";
@@ -59,7 +142,7 @@ import '@fontsource-variable/montserrat';
     .content{
         position: relative;
     }
-    body{
-        font-family: "Black Ops One", system-ui;
+    :root{
+        font-family: "Black Ops One", sans-serif;
     }
 </style>
