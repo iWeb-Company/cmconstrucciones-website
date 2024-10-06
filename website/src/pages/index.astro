@@ -24,9 +24,9 @@ import BoxsHome from '../components/BoxsHome.astro';
         </div>
     
     </section>
-    <h2 class="bg-white text-[48px] text-center py-4">Nuestros trabajos especializados
+    <h2 class="bg-white text-[35px] text-center py-4">Nuestros trabajos especializados
     </h2> 
-    <section id="works-esp" class="gap-0 w-[2000px] text-white place-items-center h-[800px] text-center grid grid-cols-[repeat(2,1fr)] grid-rows-[repeat(2,1fr)]">
+    <section id="works-esp" class="gap-0 w-full text-white place-items-center h-[800px] text-center grid grid-cols-[repeat(2,1fr)] grid-rows-[repeat(2,1fr)]">
         <div class="border border-black boxs-works bg-[url('/imgs/works/1.png')] text-white">
             <div class="uno">
                 <div class="relative">
@@ -60,10 +60,69 @@ import BoxsHome from '../components/BoxsHome.astro';
             </div>
         </div>
     </section>
-    <section id="principal-works"></section>
-    <section id="our-works"></section>
-    <section id="benefits"></section>
-    <section id="form"></section>
+    <section id="our-works">
+        <h3 class="bg-white text-[35px] text-center py-4">Algunas de nuestras obras</h3>
+        <div class="h-[250px] bg-black"></div>
+    </section>
+    <section id="benefits">
+        <h4 class="text-[35px] text-center">Beneficios de construir en seco
+        </h4>
+        <div class="my-10 gap-y-12 mx-5 grid place-items-center gap-x-5 grid-cols-[repeat(auto-fill,minmax(400px,1fr))]">
+            <div class="px-3 py-6 rounded-xl bg-boxs-benefits w-[300px] h-[250px] flex flex-col justify-around items-center bg-black text-white">
+                <img src="/favicon.svg" alt="Logo CMC SRL" class="w-24" />
+                <p class="text-center">Implementación de los más altos estándares de calidad.</p>
+            </div>
+            <div class="px-3 py-6 rounded-xl bg-boxs-benefits w-[300px] h-[250px] flex flex-col justify-around items-center bg-black text-white">
+                <img src="/favicon.svg" alt="Logo CMC SRL" class="w-24" />
+                <p class="text-center">Reducción del tiempo de realización.</p>
+            </div>
+            <div class="px-3 py-6 rounded-xl bg-boxs-benefits w-[300px] h-[250px] flex flex-col justify-around items-center bg-black text-white">
+                <img src="/favicon.svg" alt="Logo CMC SRL" class="w-24" />
+                <p class="text-center">Mayor protección en la obra.</p>
+            </div>
+            <div class="px-3 py-6 rounded-xl bg-boxs-benefits w-[300px] h-[250px] flex flex-col justify-around items-center bg-black text-white">
+                <img src="/favicon.svg" alt="Logo CMC SRL" class="w-24" />
+                <p class="text-center">Limpieza y orden en la construcción.</p>
+            </div>
+            <div class="px-3 py-6 rounded-xl bg-boxs-benefits w-[300px] h-[250px] flex flex-col justify-around items-center bg-black text-white">
+                <img src="/favicon.svg" alt="Logo CMC SRL" class="w-24" />
+                <p class="text-center">Compatibilidad con otros sistemas de construcción.</p>
+            </div>
+            <div class="px-3 py-6 rounded-xl bg-boxs-benefits w-[300px] h-[250px] flex flex-col justify-around items-center bg-black text-white">
+                <img src="/favicon.svg" alt="Logo CMC SRL" class="w-24" />
+                <p class="text-center">Costos mas bajos.</p>
+            </div>
+            <div class="px-3 py-6 rounded-xl bg-boxs-benefits w-[300px] h-[250px] flex flex-col justify-around items-center bg-black text-white">
+                <img src="/favicon.svg" alt="Logo CMC SRL" class="w-24" />
+                <p class="text-center">Utilización de materiales reciclables, respetuosos con el medio ambiente.</p>
+            </div>
+            <div class="px-3 py-6 rounded-xl bg-boxs-benefits w-[300px] h-[250px] flex flex-col justify-around items-center bg-black text-white">
+                <img src="/favicon.svg" alt="Logo CMC SRL" class="w-24" />
+                <p class="text-center">Ahorro de energía.</p>
+            </div>
+        </div>
+    </section>
+    <section id="form" class="wrap-form py-40">
+    
+        <div class="content flex justify-center items-center">
+            <form class="w-[840px] h-[442px] bg-form flex gap-y-5 gap-2 flex-col py-2 px-5" action="">
+                    <h5 class="text-white text-start text-2xl block">Contáctate con nosotros</h5>
+                            <div class="flex justify-between gap-x-20">
+                                <input placeholder="Nombre y apellido..." class="p-1 rounded-sm w-1/2" type="text">
+                                <input placeholder="Email..." class="p-1 rounded-sm w-1/2" type="text">
+                            </div>
+                            <div class="flex justify-between gap-x-20">
+                                <input placeholder="Telefono..." class="p-1 rounded-sm w-1/2" type="text">
+                                <input placeholder="M2 a construir..." class="p-1 rounded-sm w-1/2" type="text">
+                            </div>
+                            <textarea placeholder="Contanos un poco sobre tu proyecto..." class=" p-1 w-full" name="" id="textarea" cols="30" rows="10"></textarea>
+                            <div class="flex items-center justify-center">
+                                <button class="p-2 w-44 mb-2 rounded-lg text-white font-bold bg-[#21254A] text-sm" type="submit">Enviar</button>
+                            </div>
+            </form>
+        </div>
+        
+    </section>
 </Layout>
 
 <style>
@@ -116,15 +175,40 @@ import BoxsHome from '../components/BoxsHome.astro';
         background: linear-gradient(139.26deg, rgba(33, 37, 74, 0.7) 4.17%, rgba(55, 72, 176, 0.7) 95.83%);
         clip-path: polygon(55% 0, 100% 0, 100% 100%, 25% 100%);
     }
-        p{
+    p, button, input, textarea{
             font-family: 'Montserrat Variable', sans-serif;
-        }
-        .bg-home{
+    }
+    .bg-form{
+        background: linear-gradient(106.75deg, rgba(33, 37, 74, 0.9) 10.11%, rgba(55, 72, 176, 0.9) 79.1%, rgba(110, 131, 214, 0.9) 96.93%);
+
+    }
+    .bg-boxs-benefits{
+        background: linear-gradient(180deg, #21254A 0%, #3748B0 80%, #6E83D6 100%);
+
+    }
+    .bg-home{
             background: linear-gradient(119.14deg, #21254A 30.15%, #4E61AB 53.57%, #2C377D 69.85%);
             opacity: 80%;
         }
     .wrap{
         position: relative;
+    }
+    .wrap-form{
+        position: relative;
+    }
+    .wrap-form::before{
+        content: "";
+        display: block;
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        opacity: 59%; 
+        background-size: cover;
+        background-image: url('/imgs/form.png');
+        background-repeat: no-repeat;
+        background-position: center;
     }
 	.wrap::before{
         content: "";
