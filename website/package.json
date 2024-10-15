@@ -19,5 +19,6 @@
     "countup.js": "^2.8.0",
     "tailwindcss": "^3.4.13",
     "typescript": "^5.6.2"
-  }
+  },
+  "rootDirectory": "../website"
 }
