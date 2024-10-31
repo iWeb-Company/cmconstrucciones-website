@@ -1,11 +1,45 @@
 ---
 import Menu from "./Icons/Menu.astro"
 import Logo from "./Icons/Logo.astro"
+import Services from "./Icons/Services.astro"
+import Home from "./Icons/Home.astro"
+import OurWorks from "./Icons/Our-works.astro"
+import Beneficios from "./Icons/Beneficios.astro"
+import Contact from "./Icons/Contact.astro"
+
 import '@fontsource/black-ops-one';
+
 ---
 
-<header class="fixed z-50 flex py-3 gap-x-96 bg-white/70 w-full items-center justify-start text-4xl">
-    <Menu class="ml-5 font-extralight" />
+<aside id="aside" class="z-50 bg-bgAside mt-[70px] transition-all w-0 overflow-hidden h-screen fixed top-0 left-">
+    <ul class="h-full overflow-hidden transition-all gap-16 px-2 py-10 flex flex-col">
+       <li class="flex gap-x-2 items-center text-xl">
+            <Home />
+            Inicio
+        </li>
+       <li class="flex gap-x-2 items-center text-xl">
+            <Services />
+            Servicios
+        </li>
+       <li class="flex gap-x-2 items-center text-xl">
+            <OurWorks />
+            Nuestras Obras
+        </li>
+       <li class="flex gap-x-2 items-center text-xl">
+            <Beneficios />
+            Benefecios
+        </li>
+       <li class="flex gap-x-2 items-center text-xl">
+            <Contact />
+            Contacto
+        </li>
+    </ul>
+  </aside>
+  
+<header class="fixed z-50 flex py-3 gap-x-96 text-clip bg-white/70 w-full items-center justify-start text-4xl">
+    <div class="cursor-pointer" id="menu">
+        <Menu class="ml-5 font-extralight" />
+    </div>
     <div class="flex items-center gap-96">
         <Logo   
             alt="Logo CMC SRL"
@@ -18,4 +52,14 @@ import '@fontsource/black-ops-one';
     p{
         font-family: "Montserrat Variable", sans-serif;
     }
+    aside.active{
+        width: 371px;
+    }
 </style>
+<script>
+    const menu = document.getElementById("menu");
+    const aside = document.getElementById("aside")
+    menu?.addEventListener("click", () => {
+        aside?.classList.toggle("active");
+    });
+</script>

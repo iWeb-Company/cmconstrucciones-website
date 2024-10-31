@@ -5,6 +5,15 @@ import '@fontsource/black-ops-one';
 import '@fontsource-variable/montserrat';
 
 import BoxsHome from '../components/BoxsHome.astro';
+import Star from '../components/Icons/Star.astro';
+import Reduccion from '../components/Icons/Reduccion.astro';
+import Proteccion from '../components/Icons/Proteccion.astro';
+import Limpieza from '../components/Icons/Limpieza.astro';
+import Compat from '../components/Icons/Compat.astro';
+import Costos from '../components/Icons/Costos.astro';
+import Ambiente from '../components/Icons/Ambiente.astro';
+import Energia from '../components/Icons/Energia.astro';
+
 ---
 
 <Layout
@@ -12,7 +21,6 @@ import BoxsHome from '../components/BoxsHome.astro';
  description='Empresa constructora especializada a la construccion en seco.'
  >
     <section id="home" class="wrap pt-80 py-40">
-    
         <div class="content">
             <div class="flex gap-y-2 bg-home justify-center items-center flex-col py-8 w-full h-full text-white">
                 <h2 class="text-center text-[48px]">¿Quienes Somos?</h2>    
@@ -27,7 +35,7 @@ import BoxsHome from '../components/BoxsHome.astro';
     <h2 class="bg-white text-[35px] text-center py-4">Nuestros trabajos especializados
     </h2> 
     <section id="works-esp" class="gap-0 w-full text-white place-items-center h-[800px] text-center grid grid-cols-[repeat(2,1fr)] grid-rows-[repeat(2,1fr)]">
-        <div class="border border-black boxs-works bg-[url('/imgs/works/1.png')] text-white">
+        <div class="border border-black boxs-works bg-[url('public/imgs/works/1.png')] text-white">
             <div class="uno">
                 <div class="relative">
                     <small class="absolute top-24 left-60 text-8xl">1</small>
@@ -35,7 +43,7 @@ import BoxsHome from '../components/BoxsHome.astro';
                 </div>
             </div>
         </div>
-        <div class="border border-black boxs-works bg-[url('/imgs/works/2.png')] text-white">
+        <div class="border border-black boxs-works bg-[url('public/imgs/works/2.png')] text-white">
             <div class="dos">
                 <div class="relative">
                     <small class="absolute top-24 right-72 text-8xl">2</small>
@@ -43,7 +51,7 @@ import BoxsHome from '../components/BoxsHome.astro';
                 </div>
             </div>
         </div>
-        <div class="border border-black boxs-works bg-[url('/imgs/works/3.png')] text-white">
+        <div class="border border-black boxs-works bg-[url('public/imgs/works/3.png')] text-white">
             <div class="tres">
                 <div class="relative">
                     <small class="absolute top-24 left-60 text-8xl">3</small>
@@ -51,7 +59,7 @@ import BoxsHome from '../components/BoxsHome.astro';
                 </div>
             </div>
         </div>
-        <div class="border border-black boxs-works bg-[url('/imgs/works/4.png')] text-white">
+        <div class="border border-black boxs-works bg-[url('public/imgs/works/4.png')] text-white">
             <div class="cuatro">
                 <div class="relative">
                     <small class="absolute top-24 right-72 text-8xl">4</small>
@@ -69,35 +77,35 @@ import BoxsHome from '../components/BoxsHome.astro';
         </h4>
         <div class="my-10 gap-y-12 mx-5 grid place-items-center gap-x-5 grid-cols-[repeat(auto-fill,minmax(400px,1fr))]">
             <div class="px-3 py-6 rounded-xl bg-boxs-benefits w-[300px] h-[250px] flex flex-col justify-around items-center bg-black text-white">
-                <img src="/favicon.svg" alt="Logo CMC SRL" class="w-24" />
+                <Star />
                 <p class="text-center">Implementación de los más altos estándares de calidad.</p>
             </div>
             <div class="px-3 py-6 rounded-xl bg-boxs-benefits w-[300px] h-[250px] flex flex-col justify-around items-center bg-black text-white">
-                <img src="/favicon.svg" alt="Logo CMC SRL" class="w-24" />
+                <Reduccion />
                 <p class="text-center">Reducción del tiempo de realización.</p>
             </div>
             <div class="px-3 py-6 rounded-xl bg-boxs-benefits w-[300px] h-[250px] flex flex-col justify-around items-center bg-black text-white">
-                <img src="/favicon.svg" alt="Logo CMC SRL" class="w-24" />
+                <Proteccion />
                 <p class="text-center">Mayor protección en la obra.</p>
             </div>
             <div class="px-3 py-6 rounded-xl bg-boxs-benefits w-[300px] h-[250px] flex flex-col justify-around items-center bg-black text-white">
-                <img src="/favicon.svg" alt="Logo CMC SRL" class="w-24" />
+                <Limpieza />
                 <p class="text-center">Limpieza y orden en la construcción.</p>
             </div>
             <div class="px-3 py-6 rounded-xl bg-boxs-benefits w-[300px] h-[250px] flex flex-col justify-around items-center bg-black text-white">
-                <img src="/favicon.svg" alt="Logo CMC SRL" class="w-24" />
+                <Compat />
                 <p class="text-center">Compatibilidad con otros sistemas de construcción.</p>
             </div>
             <div class="px-3 py-6 rounded-xl bg-boxs-benefits w-[300px] h-[250px] flex flex-col justify-around items-center bg-black text-white">
-                <img src="/favicon.svg" alt="Logo CMC SRL" class="w-24" />
+                <Costos />
                 <p class="text-center">Costos mas bajos.</p>
             </div>
             <div class="px-3 py-6 rounded-xl bg-boxs-benefits w-[300px] h-[250px] flex flex-col justify-around items-center bg-black text-white">
-                <img src="/favicon.svg" alt="Logo CMC SRL" class="w-24" />
+                <Ambiente />
                 <p class="text-center">Utilización de materiales reciclables, respetuosos con el medio ambiente.</p>
             </div>
             <div class="px-3 py-6 rounded-xl bg-boxs-benefits w-[300px] h-[250px] flex flex-col justify-around items-center bg-black text-white">
-                <img src="/favicon.svg" alt="Logo CMC SRL" class="w-24" />
+                <Energia />
                 <p class="text-center">Ahorro de energía.</p>
             </div>
         </div>
@@ -219,7 +227,7 @@ import BoxsHome from '../components/BoxsHome.astro';
         width: 100%;
         height: 100%;
         opacity: 59%;
-        background-image: url('/imgs/moca-2.png');
+        background-image: url('public/imgs/moca-2.png');
         background-repeat: no-repeat;
         background-size: cover;
 	}

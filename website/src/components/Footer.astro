@@ -1,31 +1,36 @@
 ---
-
+import Instagram from "./Icons/Instagram.astro"
+import Linkedin from "./Icons/Linkedin.astro"
+import Whatsapp from "./Icons/Whatsapp.astro"
+import Facebook from "./Icons/Facebook.astro"
+import Iweb from "./Icons/Iweb.astro"
+import Logo from "./Icons/Logo.astro"
 ---
 
 <footer class="flex flex-col">
     <div class="py-2 flex flex-col bg-footer">
     <h6 class="text-white mb-2 text-center text-[30px]">Tambien podes contactarnos a traves de</h6>
-        <ul class="flex justify-center gap-x-32">
+        <ul class="flex justify-center gap-x-32 mb-3">
             <li>
-                <img class="size-[56px]" src="/favicon.svg" alt="Instagram Icon">
+                <Instagram />
             </li>
             <li>
-                <img class="size-[56px]" src="/favicon.svg" alt="Whatsapp Icon">
+                <Whatsapp/>
             </li>
             <li>
-                <img class="size-[56px]" src="/favicon.svg" alt="Facebook Icon">
+                <Facebook />
             </li>
             <li>
-                <img class="size-[56px]" src="/favicon.svg" alt="Linkedin Icon">
+                <Linkedin />
             </li>
         </ul>
     </div>
-    <div class="flex justify-between">
+    <div class="flex justify-between items-center">
         <span>@2024 CMC - Todos los derechos reservados</span>
-        <!-- <Logo class="w-12" /> -->
-        <div class="flex ">
+        <Logo class="w-20" />
+        <div class="flex items-center text-md">
             <span>Desarrollado por</span>
-            <img src="/public/imgs/logo-iweb.png" alt="Logo iWeb" class="w-12" />
+            <Iweb />
         </div>
     </div>
 </footer>
