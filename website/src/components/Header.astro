@@ -11,42 +11,55 @@ import '@fontsource/black-ops-one';
 
 ---
 
-<aside id="aside" class="z-50 bg-bgAside mt-[70px] transition-all w-0 overflow-hidden h-screen fixed top-0 left-">
+<aside id="aside" class="z-50 bg-bgAside mt-[57px] md:mt-[70px] transition-all w-0 overflow-hidden h-screen fixed top-0 left-">
     <ul class="h-full overflow-hidden transition-all gap-16 px-2 py-10 flex flex-col">
-       <li class="flex gap-x-2 items-center text-xl">
-            <Home />
-            Inicio
-        </li>
-       <li class="flex gap-x-2 items-center text-xl">
-            <Services />
-            Servicios
-        </li>
-       <li class="flex gap-x-2 items-center text-xl">
-            <OurWorks />
-            Nuestras Obras
-        </li>
-       <li class="flex gap-x-2 items-center text-xl">
-            <Beneficios />
-            Benefecios
-        </li>
-       <li class="flex gap-x-2 items-center text-xl">
-            <Contact />
-            Contacto
-        </li>
+        <a href="#home">
+            <li class="md:text-lg flex gap-x-2 items-center text-xl">
+                <Home />
+                Inicio
+            </li>
+        </a>
+        <a href="#works-esp">
+            <li class="md:text-lg flex gap-x-2 items-center text-xl">
+                <Services />
+                Servicios
+            </li>
+        </a>
+        <a href="#our-works">
+            <li class="md:text-lg flex gap-x-2 items-center text-xl">
+                <OurWorks />
+                Nuestras Obras
+            </li>
+        </a>
+        <a href="#benefits">
+            <li class="md:text-lg flex gap-x-2 items-center text-xl">
+                <Beneficios />
+                Benefecios
+            </li>
+        </a>
+            <a href="#form">
+                <li class="flex gap-x-2 items-center text-xl">
+                    <Contact />
+                    Contacto
+                </li>
+            </a>
     </ul>
   </aside>
   
-<header class="fixed z-50 flex py-3 gap-x-96 text-clip bg-white/70 w-full items-center justify-start text-4xl">
-    <div class="cursor-pointer" id="menu">
-        <Menu class="ml-5 font-extralight" />
+
+  <header class="fixed z-50 flex py-3 h-[57px] gap-5 md:h-[70px] bg-white/70 w-full items-center md:justify-between text-4xl">
+    <div class="cursor-pointer pl-5" id="menu">
+        <Menu class="font-extralight" />
     </div>
-    <div class="flex items-center gap-96">
+    <div class="flex items-center md:gap-0 gap-16">
         <Logo   
             alt="Logo CMC SRL"
-            class="w-28"
+            class="md:w-28 w-20"
         />
-        <h1 class="underline text-black text-2xl font-bold">CARLOS MARTINEZ CONSTRUCCIONES S.R.L</h1>
     </div>
+        <h1 class="underline text-black font-bold text-sm md:text-2xl md:pr-20 pr-5">
+            CARLOS MARTINEZ CONSTRUCCIONES S.R.L
+        </h1>
 </header>
 <style>
     p{

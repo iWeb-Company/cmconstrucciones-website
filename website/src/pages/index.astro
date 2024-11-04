@@ -24,7 +24,7 @@ import Energia from '../components/Icons/Energia.astro';
         <div class="content">
             <div class="flex gap-y-2 bg-home justify-center items-center flex-col py-8 w-full h-full text-white">
                 <h2 class="text-center text-[48px]">¿Quienes Somos?</h2>    
-                <p class="w-[1037px] montserrat">Somos una empresa especializada en construcción en seco, ofreciendo soluciones rápidas, eficientes y de alta calidad para proyectos residenciales, comerciales e industriales. Nos destacamos por el uso de sistemas de construcción modernos como el steel framing, placas de yeso (drywall), y paneles aislantes, que permiten reducir tiempos de obra, minimizar residuos y optimizar costos sin comprometer la seguridad ni el confort.
+                <p class="text-center xl:mx-96 mx-0 montserrat">Somos una empresa especializada en construcción en seco, ofreciendo soluciones rápidas, eficientes y de alta calidad para proyectos residenciales, comerciales e industriales. Nos destacamos por el uso de sistemas de construcción modernos como el steel framing, placas de yeso (drywall), y paneles aislantes, que permiten reducir tiempos de obra, minimizar residuos y optimizar costos sin comprometer la seguridad ni el confort.
                 </p>  
             </div>
             <BoxsHome />
@@ -34,36 +34,36 @@ import Energia from '../components/Icons/Energia.astro';
     </section>
     <h2 class="bg-white text-[35px] text-center py-4">Nuestros trabajos especializados
     </h2> 
-    <section id="works-esp" class="gap-0 w-full text-white place-items-center h-[800px] text-center grid grid-cols-[repeat(2,1fr)] grid-rows-[repeat(2,1fr)]">
+    <section id="works-esp" class="gap-0 w-full h-[900px] text-white place-items-center text-center flex flex-col md:grid grid-cols-[repeat(2,1fr)] grid-rows-[repeat(2,1fr)]">
         <div class="border border-black boxs-works bg-[url('public/imgs/works/1.png')] text-white">
-            <div class="uno">
-                <div class="relative">
-                    <small class="absolute top-24 left-60 text-8xl">1</small>
-                    <small class="absolute top-48 left-44 text-3xl">Tabiqueria</small>
+            <div class="uno ">
+                <div class="relative z-50">
+                    <small class="absolute top-24 left-10 text-8xl">1</small>
+                    <small class="absolute top-48 left-0 text-lg px-3 md:text-3xl">Tabiqueria</small>
                 </div>
             </div>
         </div>
         <div class="border border-black boxs-works bg-[url('public/imgs/works/2.png')] text-white">
             <div class="dos">
-                <div class="relative">
-                    <small class="absolute top-24 right-72 text-8xl">2</small>
-                    <small class="absolute top-48 right-56 text-3xl">Cielorraso</small>
+                <div class="relative z-50">
+                    <small class="absolute top-24 right-10 text-8xl">2</small>
+                    <small class="absolute top-48 right-0 text-lg px-3 md:text-3xl">Cielorraso</small>
                 </div>
             </div>
         </div>
         <div class="border border-black boxs-works bg-[url('public/imgs/works/3.png')] text-white">
             <div class="tres">
-                <div class="relative">
-                    <small class="absolute top-24 left-60 text-8xl">3</small>
-                    <small class="absolute top-48 left-44 text-3xl">Revestimientos</small>
+                <div class="relative z-50">
+                    <small class="absolute top-24 left-10 text-8xl">3</small>
+                    <small class="absolute top-48 left-0 text-lg px-3 md:text-3xl">Revestimientos</small>
                 </div>
             </div>
         </div>
         <div class="border border-black boxs-works bg-[url('public/imgs/works/4.png')] text-white">
             <div class="cuatro">
-                <div class="relative">
-                    <small class="absolute top-24 right-72 text-8xl">4</small>
-                    <small class="absolute top-48 right-56 text-3xl">Tratamientos <br> Acústicos</small>
+                <div class="relative z-50">
+                    <small class="absolute top-24 right-10 text-8xl">4</small>
+                    <small class="absolute top-48 right-0 text-lg px-3 md:text-3xl">Tratamientos <br> Acústicos</small>
                 </div>
             </div>
         </div>
@@ -75,7 +75,7 @@ import Energia from '../components/Icons/Energia.astro';
     <section id="benefits">
         <h4 class="text-[35px] text-center">Beneficios de construir en seco
         </h4>
-        <div class="my-10 gap-y-12 mx-5 grid place-items-center gap-x-5 grid-cols-[repeat(auto-fill,minmax(400px,1fr))]">
+        <div class="my-10 gap-y-12 mx-5 md:grid flex flex-col justify-center items-center md:place-items-center gap-x-5 md:grid-cols-[repeat(auto-fill,minmax(400px,1fr))]">
             <div class="px-3 py-6 rounded-xl bg-boxs-benefits w-[300px] h-[250px] flex flex-col justify-around items-center bg-black text-white">
                 <Star />
                 <p class="text-center">Implementación de los más altos estándares de calidad.</p>
@@ -110,10 +110,10 @@ import Energia from '../components/Icons/Energia.astro';
             </div>
         </div>
     </section>
-    <section id="form" class="wrap-form py-40">
+    <section id="form" class="wrap-form py-40 px-2">
     
         <div class="content flex justify-center items-center">
-            <form class="w-[840px] h-[442px] bg-form flex gap-y-5 gap-2 flex-col py-2 px-5" action="">
+            <form class="md:w-[840px] md:h-[442px] bg-form flex gap-y-5 gap-2 flex-col py-2 px-5" action="">
                     <h5 class="text-white text-start text-2xl block">Contáctate con nosotros</h5>
                             <div class="flex justify-between gap-x-20">
                                 <input placeholder="Nombre y apellido..." class="p-1 rounded-sm w-1/2" type="text">
@@ -134,6 +134,12 @@ import Energia from '../components/Icons/Energia.astro';
 </Layout>
 
 <style>
+
+    #works-esp img{
+        width: 100%;
+        height: 30px;
+    }
+
     .boxs-works{
         background-size: cover;
         background-repeat: no-repeat;
@@ -214,7 +220,7 @@ import Energia from '../components/Icons/Energia.astro';
         height: 100%;
         opacity: 59%; 
         background-size: cover;
-        background-image: url('/imgs/form.png');
+        background-image: url('public/imgs/form.png');
         background-repeat: no-repeat;
         background-position: center;
     }
