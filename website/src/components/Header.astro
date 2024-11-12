@@ -11,8 +11,8 @@ import '@fontsource/black-ops-one';
 
 ---
 
-<aside id="aside" class="z-50 bg-bgAside mt-[57px] md:mt-[70px] transition-all w-0 overflow-hidden h-screen fixed top-0 left-">
-    <ul class="h-full overflow-hidden transition-all gap-16 px-2 py-10 flex flex-col">
+<aside id="aside" class="z-50 bg-bgAside mt-[57px] backdrop-blur-sm md:mt-[70px] transition-all w-0 overflow-hidden h-screen fixed top-0 left-">
+    <ul class="h-full overflow-hidden transition-all sm:gap-16 px-2 flex justify-around sm:justify-start flex-col">
         <a href="#home">
             <li class="md:text-lg flex gap-x-2 items-center text-xl">
                 <Home />
@@ -47,7 +47,7 @@ import '@fontsource/black-ops-one';
   </aside>
   
 
-  <header class="fixed z-50 flex py-3 h-[57px] gap-5 md:h-[70px] bg-white/70 w-full items-center md:justify-between text-4xl">
+  <header class="backdrop-blur-sm fixed z-50 flex py-3 h-[57px] gap-5 md:h-[70px] bg-white/70 w-full items-center md:justify-between text-4xl">
     <div class="cursor-pointer pl-5" id="menu">
         <Menu class="font-extralight" />
     </div>
@@ -67,6 +67,12 @@ import '@fontsource/black-ops-one';
     }
     aside.active{
         width: 371px;
+    }
+
+    @media (width: 390px) {
+        aside.active{
+            width: 300px;
+        }
     }
 </style>
 <script>

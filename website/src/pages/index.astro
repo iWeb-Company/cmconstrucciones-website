@@ -1,10 +1,13 @@
 ---
 import Layout from '../layouts/Layout.astro';
+
 import '@fontsource/black-ops-one';
 // Supports weights 100-900
 import '@fontsource-variable/montserrat';
 
 import BoxsHome from '../components/BoxsHome.astro';
+import Gallery from '../components/Gallery.astro';
+
 import Star from '../components/Icons/Star.astro';
 import Reduccion from '../components/Icons/Reduccion.astro';
 import Proteccion from '../components/Icons/Proteccion.astro';
@@ -63,14 +66,16 @@ import Energia from '../components/Icons/Energia.astro';
             <div class="cuatro">
                 <div class="relative z-50">
                     <small class="absolute top-24 right-10 text-8xl">4</small>
-                    <small class="absolute top-48 right-0 text-lg px-3 md:text-3xl">Tratamientos <br> Acústicos</small>
+                    <small class="absolute top-44 right-0 text-lg px-3 md:text-3xl">Tratamientos <br> Acústicos</small>
                 </div>
             </div>
         </div>
     </section>
     <section id="our-works">
         <h3 class="bg-white text-[35px] text-center py-4">Algunas de nuestras obras</h3>
-        <div class="h-[250px] bg-black"></div>
+        <div class="container mx-auto">
+            <Gallery />
+        </div>
     </section>
     <section id="benefits">
         <h4 class="text-[35px] text-center">Beneficios de construir en seco
