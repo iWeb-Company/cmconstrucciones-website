@@ -2,130 +2,35 @@
 import 'photoswipe/style.css';
 ---
 
-<div class="grid grid-cols-2 px-2 md:grid-cols-3 mx-auto max-h-[1000px] will-change-scroll overflow-y-auto gap-3" id="gallery">
+<!-- grid grid-cols-2 px-2 md:grid-cols-3 mx-auto max-h-[1000px] overflow-y-auto gap-3 -->
+
+<div class="grid grid-cols-2 md:grid-cols-3 gap-4 px-2 max-w-10xl max-h-[1000px] overflow-y-auto mx-auto py-20" id="gallery">
+    
+  {
+    Array.from({length: 24}).map((_, i) => (
     <div>
-        <a href="/public/imgs/moca-2.png"
-          data-pswp-width="2500" 
-          data-pswp-height="1667" 
-          target="_blank">
-          <img class="rounded-2xl" src="/public/imgs/moca-2.png" alt="" />
-        </a>
-      </div>
-      <div>
-        <a href="/public/imgs/moca-2.png"
-          data-pswp-width="2500" 
-          data-pswp-height="1667" 
-          target="_blank">
-          <img class="rounded-2xl" src="/public/imgs/moca-2.png" alt="" />
-          
-        </a>
-      </div>
-      <div>
-        <a href="/public/imgs/moca-2.png"
-          data-pswp-width="2500" 
-          data-pswp-height="1667" 
-          target="_blank">
-          <img class="rounded-2xl" src="/public/imgs/moca-2.png" alt="" />
-          
-        </a>
-      </div>
-      <div>
-        <a href="/public/imgs/moca-2.png"
-          data-pswp-width="2500" 
-          data-pswp-height="1667" 
-          target="_blank">
-          <img class="rounded-2xl" src="/public/imgs/moca-2.png" alt="" />
-          
-        </a>
-      </div>
-      <div>
-        <a href="/public/imgs/moca-2.png"
-          data-pswp-width="2500" 
-          data-pswp-height="1667" 
-          target="_blank">
-          <img class="rounded-2xl" src="/public/imgs/moca-2.png" alt="" />
-          
-        </a>
-      </div>
-    <!-- wrapped with any element: -->
-    <div>
-      <a href="/public/imgs/moca-2.png"
-        data-pswp-width="2500" 
-        data-pswp-height="1667" 
-        target="_blank">
-          <img class="rounded-2xl" src="/public/imgs/moca-2.png" alt="" />
-        
-      </a>
-    </div>
-    <div>
-        <a href="/public/imgs/moca-2.png"
-          data-pswp-width="2500" 
-          data-pswp-height="1667" 
-          target="_blank">
-          <img class="rounded-2xl" src="/public/imgs/moca-2.png" alt="" />
-          
-        </a>
-      </div>
-      <div>
-        <a href="/public/imgs/moca-2.png"
-          data-pswp-width="2500" 
-          data-pswp-height="1667" 
-          target="_blank">
-          <img class="rounded-2xl" src="/public/imgs/moca-2.png" alt="" />
-          
-        </a>
-      </div>
-      <div>
-        <a href="/public/imgs/moca-2.png"
-          data-pswp-width="2500" 
-          data-pswp-height="1667" 
-          target="_blank">
-          <img class="rounded-2xl" src="/public/imgs/moca-2.png" alt="" />
-          
-        </a>
-      </div>
-      <div>
-        <a href="/public/imgs/moca-2.png"
-          data-pswp-width="2500" 
-          data-pswp-height="1667" 
-          target="_blank">
-          <img class="rounded-2xl" src="/public/imgs/moca-2.png" alt="" />
-          
-        </a>
-      </div>
-      <div>
-        <a href="/public/imgs/moca-2.png"
-          data-pswp-width="2500" 
-          data-pswp-height="1667" 
-          target="_blank">
-          <img class="rounded-2xl" src="/public/imgs/moca-2.png" alt="" />
-          
-        </a>
-      </div>
-      <div>
-        <a href="/public/imgs/moca-2.png"
-          data-pswp-width="2500" 
-          data-pswp-height="1667" 
-          target="_blank">
-          <img class="rounded-2xl" src="/public/imgs/moca-2.png" alt="" />
-          
-        </a>
-      </div>
-      <div>
-        <a href="/public/imgs/moca-2.png"
-          data-pswp-width="2500" 
-          data-pswp-height="1667" 
-          target="_blank">
-          <img class="rounded-2xl" src="/public/imgs/moca-2.png" alt="" />
-          
-        </a>
-      </div>
+    <a 
+      href={`/public/imgs/gallery/${i + 1}.jpg`}
+      data-pswp-width="2500" 
+      data-pswp-height="1667" 
+      data-cropped="true"
+      target="_blank">
+      <img
+        loading="lazy"
+        class="rounded-2xl max-h-96 hover:scale-95 md:opacity-95 w-full aspect-square md:blur-[0.8px] hover:blur-none hover:opacity-100 transition-all"
+        src={`/public/imgs/gallery/${i + 1}.jpg`}
+        alt={`Imagen numero ${i + 1}`} />
+    </a>
+  </div>
+    ))
+  }
   </div>
 
 <script>
     import PhotoSwipeLightbox from 'photoswipe/lightbox';
+    
     const lightbox = new PhotoSwipeLightbox({
-  gallery: '#gallery',
+        gallery: '#gallery',
   children: 'a',
   pswpModule: () => import('photoswipe'),
 });
