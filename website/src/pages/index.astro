@@ -17,6 +17,8 @@ import Costos from '../components/Icons/Costos.astro';
 import Ambiente from '../components/Icons/Ambiente.astro';
 import Energia from '../components/Icons/Energia.astro';
 
+import sendEmail from '../api.ts'
+
 ---
 
 <Layout
@@ -115,20 +117,20 @@ import Energia from '../components/Icons/Energia.astro';
             </div>
         </div>
     </section>
-    <section id="form" class="wrap-form py-40 px-2">
+    <section class="wrap-form py-40 px-2">
     
         <div class="content flex justify-center items-center">
-            <form class="md:w-[840px] md:h-[442px] bg-form flex gap-y-5 gap-2 flex-col py-2 px-5" action="">
+            <form id="form" class="md:w-[840px] md:h-[442px] bg-form flex gap-y-5 gap-2 flex-col py-2 px-5" action="POST">
                     <h5 class="text-white text-start text-2xl block">Contáctate con nosotros</h5>
                             <div class="flex justify-between gap-x-20">
-                                <input placeholder="Nombre y apellido..." class="p-1 rounded-sm w-1/2" type="text">
-                                <input placeholder="Email..." class="p-1 rounded-sm w-1/2" type="text">
+                                <input required name="nombre" placeholder="Nombre y apellido..." class="p-1 rounded-sm w-1/2" type="text">
+                                <input required name="email" placeholder="Email..." class="p-1 rounded-sm w-1/2" type="text">
                             </div>
                             <div class="flex justify-between gap-x-20">
-                                <input placeholder="Telefono..." class="p-1 rounded-sm w-1/2" type="text">
-                                <input placeholder="M2 a construir..." class="p-1 rounded-sm w-1/2" type="text">
+                                <input required name="telefono" placeholder="Telefono..." class="p-1 rounded-sm w-1/2" type="text">
+                                <input name="m2" placeholder="M2 a construir..." class="p-1 rounded-sm w-1/2" type="text">
                             </div>
-                            <textarea placeholder="Contanos un poco sobre tu proyecto..." class=" p-1 w-full" name="" id="textarea" cols="30" rows="10"></textarea>
+                            <textarea required name="mensaje" placeholder="Contanos un poco sobre tu proyecto..." class=" p-1 w-full" name="" id="textarea" cols="30" rows="10"></textarea>
                             <div class="flex items-center justify-center">
                                 <button class="p-2 w-44 mb-2 rounded-lg text-white font-bold bg-[#21254A] text-sm" type="submit">Enviar</button>
                             </div>
@@ -249,3 +251,34 @@ import Energia from '../components/Icons/Energia.astro';
         font-family: "Black Ops One", sans-serif;
     }
 </style>
+<script type="module">
+    const $form = document.getElementById('form');    
+    const API_URL = "https://backend-cons-production.up.railway.app/send-email";
+
+    async function sendEmail (data) {
+  const response = await fetch(API_URL, {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify(data),
+  });
+
+  if(!response.ok){
+    throw new Error('Error al enviar el email');
+  }
+  return await response.json();
+};
+
+    $form.addEventListener('submit', async (e) => {
+        try {
+            e.preventDefault();
+            const formData = new FormData($form);
+            const data = Object.fromEntries(formData.entries());
+            console.log('Datos del formulario:', data);
+            sendEmail(data);
+        }catch (error) {
+            console.log(error);
+    }             
+})
+</script>
